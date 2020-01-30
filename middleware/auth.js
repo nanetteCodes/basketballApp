@@ -1,10 +1,10 @@
 const jwt = require('jsonwebtoken');
 const config = require('config');
 
-// middleware function takes 3 params, it has access to
+// middleware function takes 3 params, 
 // has access to the req and res objects.
 // next is a callback that has to be run
-module.exports = function(req, res, next) {
+module.exports = function (req, res, next) {
   // GET TOKEN FROM HEADER
   const token = req.header('x-auth-token');
   // CHECK IF NO TOKEN

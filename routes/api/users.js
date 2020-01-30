@@ -70,12 +70,12 @@ router.post(
           id: user.id
         }
       };
-      //sign token => pass payload and token
-      //TODO: CHANGE EXPIRES IN WHEN DEPLOYING
+      // sign token => pass payload and token
+      // TODO: CHANGE EXPIRES IN WHEN DEPLOYING TO 3600
       jwt.sign(
         payload,
         config.get('jwtSecret'),
-        { expiresIn: 360000 },
+        { expiresIn: 36000 },
         (err, token) => {
           if (err) throw err;
           res.json({ token });
