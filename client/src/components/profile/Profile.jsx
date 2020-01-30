@@ -10,11 +10,13 @@ import ProfileEducation from './ProfileEducation';
 import ProfileGithub from './ProfileGithub';
 import { getProfileById } from '../../actions/profile';
 
+import './Profile.scss';
+
 const Profile = ({
   getProfileById,
   profile: { profile, loading },
   auth,
-  match
+  match,
 }) => {
   useEffect(() => {
     getProfileById(match.params.id);
@@ -84,15 +86,12 @@ const Profile = ({
 Profile.propTypes = {
   getProfileById: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
   profile: state.profile,
-  auth: state.auth
+  auth: state.auth,
 });
 
-export default connect(
-  mapStateToProps,
-  { getProfileById }
-)(Profile);
+export default connect(mapStateToProps, { getProfileById })(Profile);
