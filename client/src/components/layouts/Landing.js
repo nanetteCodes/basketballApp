@@ -1,21 +1,20 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
 
 const Landing = ({ isAuthenticated }) => {
-  if(isAuthenticated) {
-   return <Redirect to='/dashboard'/>
+  if (isAuthenticated) {
+    return <Redirect to='/dashboard' />
   }
 
   return (
     <section className="landing">
       <div className="dark-overlay">
         <div className="landing-inner">
-          <h1 className="x-large">Developer Connector</h1>
+          <h1 className="x-large">Basketball App</h1>
           <p className="lead">
-            Create a developer profile/portfolio, share posts and get help from
-            other developers
+            To be developed soon...
           </p>
           <div className="buttons">
             <Link to="/register" className="btn btn-primary">Sign Up</Link>
