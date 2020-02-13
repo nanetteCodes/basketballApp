@@ -1,12 +1,6 @@
-/* Global Styles */
-:root {
-  --primary-color: #17a2b8;
-  --dark-color: #343a40;
-  --light-color: #f4f4f4;
-  --danger-color: #dc3545;
-  --success-color: #28a745;
-}
+@import './utils/variables';
 
+/* Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,11 +8,11 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: $main-font;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
-  color: #333;
+  background-color: $background-color;
+  color: $text-color-primary;
 }
 
 html,
@@ -27,17 +21,16 @@ body {
   height: 100%;
 }
 
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
 ul {
   list-style: none;
 }
 
 img {
   width: 100%;
+}
+
+a {
+  color: $text-color-primary;
 }
 
 /* Utilities */
@@ -50,107 +43,22 @@ img {
   margin-bottom: 3rem;
 }
 
-/* Text Styles*/
-.x-large {
-  font-size: 4rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  color: black;
-}
-
-.large {
-  font-size: 3rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.medium {
-  font-size: 1.3rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.lead {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-primary {
-  color: var(--primary-color);
-}
-
-.text-dark {
-  color: var(--dark-color);
-}
-
-/* Padding */
-.p {
-  padding: 0.5rem;
-}
-.p-1 {
-  padding: 1rem;
-}
-.p-2 {
-  padding: 2rem;
-}
-.p-3 {
-  padding: 3rem;
-}
-.py {
-  padding: 0.5rem 0;
-}
-.py-1 {
-  padding: 1rem 0;
-}
-.py-2 {
-  padding: 2rem 0;
-}
-.py-3 {
-  padding: 3rem 0;
-}
-
-/* Margin */
-.m {
-  margin: 0.5rem;
-}
-.m-1 {
-  margin: 1rem;
-}
-.m-2 {
-  margin: 2rem;
-}
-.m-3 {
-  margin: 3rem;
-}
-.my {
-  margin: 0.5rem 0;
-}
-.my-1 {
-  margin: 1rem 0;
-}
-.my-2 {
-  margin: 2rem 0;
-}
-.my-3 {
-  margin: 3rem 0;
-}
-
 .btn {
   display: inline-block;
-  background: var(--light-color);
-  color: #333;
-  padding: 0.4rem 1.3rem;
-  font-size: 1rem;
+  font-size: 16px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+.link {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
 }
 
 .badge {

@@ -1,27 +1,52 @@
+@import '../../utils/_variables.scss';
+
 .landing {
   position: relative;
   /* background: url('./img/showcase.jpg') no-repeat center center/cover; */
 }
 
 .landing-1 {
-  color: #fff;
-  height: 100%;
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 0 15px 58px;
   text-align: center;
-}
 
-.login-link {
-  display: block;
-  text-decoration: underline;
-}
+  &_img {
+    width: 100%;
+    padding: 0 24px 40px;
+  }
 
-.btn-landing {
-  width: 100%;
+  &_title {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+    line-height: 38px;
+    margin-bottom: 19px;
+  }
+
+  &_p {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+  }
+
+  &_title,
+  &_p {
+    text-align: left;
+  }
+
+  &_btn-signup {
+    height: 48px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.18);
+    background-color: $purple;
+    padding: 11px;
+    margin: 80px 0 21px;
+    color: #fff;
+  }
+
+  &_link-login {
+    margin-top: 21px;
+  }
 }
 
 .landing-2 {
@@ -49,8 +74,8 @@
 }
 
 .landing-title {
-  font-size: 2 rem;
   color: black;
+  margin-top: 1rem;
 }
 
 .landing-p {

@@ -3,6 +3,8 @@ import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import baller from '../../img/baller.png';
+
 import './Landing.scss';
 
 const Landing = ({ isAuthenticated }) => {
@@ -13,17 +15,20 @@ const Landing = ({ isAuthenticated }) => {
   return (
     <section className='landing'>
       <div className='landing-1'>
-        <h1 className='x-large'>
-          Find Courts <br /> Meet Teammated
+        <div className='landing-1_img'>
+          <img src={baller} alt='baller' />
+        </div>
+        <h1 className='landing-1_title'>
+          Find Courts <br /> Meet Teammates
         </h1>
-        <p className='lead'>
+        <p className='landing-1_p'>
           The basketball app is your resource to find high qualtiy and safe
           pickup games in your area.
         </p>
-        <Link to='/register' className='btn btn-landing'>
+        <Link to='/register' className='btn landing-1_btn-signup'>
           Sign Up
         </Link>
-        <Link to='/login' className='login-link'>
+        <Link to='/login' className='link landing-1_link-login'>
           Login
         </Link>
       </div>

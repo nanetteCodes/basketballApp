@@ -1,14 +1,10 @@
+@import '../../utils/variables';
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem 2rem;
-  position: fixed;
+  display: block;
   z-index: 1;
   width: 100%;
-  top: 0;
-  border-bottom: solid 1px var(--primary-color);
-  opacity: 0.9;
+  background-color: $nav-color;
 }
 
 .navbar ul {
