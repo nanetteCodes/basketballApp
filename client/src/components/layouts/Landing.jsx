@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import baller from '../../img/baller.png';
+import ball from '../../img/icon-bball.png';
+import hoop from '../../img/icon-hoop.png';
+import losAngeles from '../../img/los-angeles.png';
 
 import './Landing.scss';
 
@@ -34,33 +37,34 @@ const Landing = ({ isAuthenticated }) => {
       </div>
       <div className='landing-2'>
         <i className='fas fa-user-alt'></i>{' '}
-        <h2 className='landing-title medium'>Sync up with your teammates</h2>
-        <p className='landing-p'>
+        <h2 className='landing-2_title'>Sync up with your teammates</h2>
+        <p className='landing-2_p'>
           Pellentesque in ipsum id orci porta dapibus. Vestibulum ante ipsum
           primis in faucibus orci luctus et.
         </p>
-        <i className='fas fa-basketball-ball'></i>{' '}
-        <h2 className='landing-title medium'>Instantly Find a Court</h2>
-        <p className='landing-p'>
+        <img className='landing-2_icon' src={ball} alt='basketball' />{' '}
+        <h2 className='landing-2_title'>Instantly Find a Court</h2>
+        <p className='landing-2_p'>
           Pellentesque in ipsum id orci porta dapibus. Vestibulum ante ipsum
           primis in faucibus orci luctus et.
         </p>
-        <i className='fas fa-basketball-ball'></i>{' '}
-        <h2 className='landing-title medium'>
+        <img className='landing-2_icon' src={hoop} alt='basketball hoop' />{' '}
+        <h2 className='landing-2_title'>
           Avoid the Typical Pickup Game Hastle
         </h2>
-        <p className='landing-p'>
+        <p className='landing-2_p'>
           Pellentesque in ipsum id orci porta dapibus. Vestibulum ante ipsum
           primis in faucibus orci luctus et.
         </p>
       </div>
       <div className='landing-3'>
-        <h1 className='x-large'>Find a court anywhere in your city.</h1>
-        <p className='landing-p'>
+        <img className='landing-3_img' src={losAngeles} alt='los angeles' />{' '}
+        <h1 className='landing-3_title'>Find a court anywhere in your city.</h1>
+        <p className='landing-3_p'>
           All of our courts get a net safty rating and a description so that you
           will know that the court you are going to is a safe place to play
         </p>
-        <Link to='/register' className='btn btn-landing'>
+        <Link to='/register' className='btn landing-3_btn-signup'>
           Sign Up
         </Link>
       </div>

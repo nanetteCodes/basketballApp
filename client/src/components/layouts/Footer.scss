@@ -7,6 +7,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #d7d7d7;
-  padding: 20px;
+  background-color: $background-footer;
+  padding: 29px 15px 39px;
+
+  &_text {
+    opacity: 0.4;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }

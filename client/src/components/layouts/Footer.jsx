@@ -7,18 +7,22 @@ const Footer = () => {
     <div className='footer'>
       <ul>
         <li>
-          <span>
+          <span className='footer_text'>
             © {new Date().getFullYear()} BasktballApp all rights reserved
           </span>
         </li>
         <li>
-          <Link to='/privacy'>Privacy Policy</Link>
+          <Link className='footer_text' to='/privacy'>
+            Privacy Policy
+          </Link>
         </li>
         <li>
-          <Link to='/terms-of-service'>Terms of Service</Link>
+          <Link className='footer_text' to='/terms-of-service'>
+            Terms of Service
+          </Link>
         </li>
         <li>
-          <span>Made in Los Angeles</span>
+          <span className='footer_text'>Made in Los Angeles</span>
         </li>
       </ul>
     </div>
