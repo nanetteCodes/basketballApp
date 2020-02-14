@@ -76,9 +76,19 @@
     line-height: 24px;
   }
 
-  &_icon {
+  &_icon--people {
+    height: 34px;
+    width: 43.94px;
+  }
+
+  &_icon--ball {
     height: 42px;
     width: 40px;
+  }
+
+  &_icon--hoop {
+    height: 40px;
+    width: 44px;
   }
 }
 

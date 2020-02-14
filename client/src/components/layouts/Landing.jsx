@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import baller from '../../img/baller.png';
+import losAngeles from '../../img/los-angeles.png';
 import ball from '../../img/icon-bball.png';
 import hoop from '../../img/icon-hoop.png';
-import losAngeles from '../../img/los-angeles.png';
+import people from '../../img/icon-people.png';
 
 import './Landing.scss';
 
@@ -36,19 +37,23 @@ const Landing = ({ isAuthenticated }) => {
         </Link>
       </div>
       <div className='landing-2'>
-        <i className='fas fa-user-alt'></i>{' '}
+        <img className='landing-2_icon--people' src={people} alt='people' />{' '}
         <h2 className='landing-2_title'>Sync up with your teammates</h2>
         <p className='landing-2_p'>
           Pellentesque in ipsum id orci porta dapibus. Vestibulum ante ipsum
           primis in faucibus orci luctus et.
         </p>
-        <img className='landing-2_icon' src={ball} alt='basketball' />{' '}
+        <img className='landing-2_icon--ball' src={ball} alt='basketball' />{' '}
         <h2 className='landing-2_title'>Instantly Find a Court</h2>
         <p className='landing-2_p'>
           Pellentesque in ipsum id orci porta dapibus. Vestibulum ante ipsum
           primis in faucibus orci luctus et.
         </p>
-        <img className='landing-2_icon' src={hoop} alt='basketball hoop' />{' '}
+        <img
+          className='landing-2_icon--hoop'
+          src={hoop}
+          alt='basketball hoop'
+        />{' '}
         <h2 className='landing-2_title'>
           Avoid the Typical Pickup Game Hastle
         </h2>
