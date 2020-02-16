@@ -43,7 +43,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     </ul>
   );
   return (
-    <nav className='navbar'>
+    <nav className='navbar' style={{ backgroundColor: 'blue' }}>
       <h1>
         <Link to='/'>
           <i className='fas fa-basketball-ball'></i> Basketball App
