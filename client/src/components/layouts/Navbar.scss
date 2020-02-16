@@ -1,58 +1,32 @@
 @import '../../utils/variables';
-
-// .navbar {
-//   display: block;
-//   z-index: 1;
-//   width: 100%;
-//   background-color: $nav-color;
-// }
-
-// .navbar ul {
-//   display: flex;
-// }
-
-// .navbar a {
+// a {
 //   color: #fff;
-//   padding: 0.45rem;
-//   margin: 0 0.25rem;
 // }
+/* Hamburger */
 
-// .navbar a:hover {
-//   color: var(--primary-color);
-// }
-
-// .navbar .welcome span {
-//   margin-right: 0.6rem;
-// }
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem 2rem;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  top: 0;
-  border-bottom: solid 1px var(--primary-color);
-  opacity: 0.9;
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.navbar ul {
-  display: flex;
+@keyframes slideIn {
+  0% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-.navbar a {
-  color: #fff;
-  padding: 0.45rem;
-  margin: 0 0.25rem;
-}
-
-.navbar a:hover {
-  color: var(--primary-color);
-}
-
-.navbar .welcome span {
-  margin-right: 0.6rem;
+@keyframes shrink {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 90%;
+  }
 }

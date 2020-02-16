@@ -1,65 +1,62 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { logout } from '../../actions/auth';
-
+import React, { Component } from 'react';
+import Menu from '../Hamburger/Menu';
+import MenuButton from '../Hamburger/MenuButton';
+import MenuItems from '../Hamburger/MenuItems';
 import './Navbar.scss';
 
-const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
-  const authLinks = (
-    <ul>
-      <li>
-        <Link to='/profiles'>Developers</Link>
-      </li>
-      <li>
-        <Link to='/posts'>Posts</Link>
-      </li>
-      <li>
-        <Link to='/dashboard'>
-          <i className='fas fa-sign-out-alt'></i>{' '}
-          <span className='hide-sm'>Dashboard</span>
-        </Link>
-      </li>
-      <li>
-        <a onClick={logout} href='#!'>
-          <i className='fas fa-sign-out-alt'></i>{' '}
-          <span className='hide-sm'>Logout</span>
-        </a>
-      </li>
-    </ul>
-  );
-  const guestLinks = (
-    <ul>
-      <li>
-        <Link to='/profiles'>Players</Link>
-      </li>
-      <li>
-        <Link to='/register'>Register</Link>
-      </li>
-      <li>
-        <Link to='/login'>Login</Link>
-      </li>
-    </ul>
-  );
-  return (
-    <nav className='navbar' style={{ backgroundColor: 'blue' }}>
-      <h1>
-        <Link to='/'>
-          <i className='fas fa-basketball-ball'></i> Basketball App
-        </Link>
-      </h1>
-      {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
-    </nav>
-  );
-};
+export default class Navbar extends Component {
+  state = {
+    menuOpen: false,
+  };
 
-Navbar.propTypes = {
-  logout: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired,
-};
+  handleMenuClick = () => {
+    this.setState({ menuOpen: !this.state.menuOpen });
+  };
 
-const mapStateToProps = state => ({
-  auth: state.auth,
-});
-export default connect(mapStateToProps, { logout })(Navbar);
+  handleLinkClick = () => {
+    this.setState({ menuOpen: false });
+  };
+
+  render() {
+    const styles = {
+      container: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        zIndex: '99',
+        opacity: 0.9,
+        display: 'flex',
+        alignItems: 'center',
+        background: 'black',
+        width: '100%',
+        color: 'white',
+        fontFamily: 'Lobster',
+      },
+      body: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: '100vw',
+        height: '100vh',
+        filter: this.state.menuOpen ? 'blur(2px)' : null,
+        transition: 'filter 0.5s ease',
+      },
+    };
+
+    return (
+      <div>
+        <div style={styles.container}>
+          <MenuButton
+            open={this.state.menuOpen}
+            onClick={this.handleMenuClick}
+            color='white'
+          />
+        </div>
+        <Menu open={this.state.menuOpen}>
+          {/* <div>Logo</div> */}
+          <MenuItems handleLinkClick={this.handleLinkClick} />
+        </Menu>
+      </div>
+    );
+  }
+}
