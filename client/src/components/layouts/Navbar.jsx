@@ -20,17 +20,10 @@ export default class Navbar extends Component {
   render() {
     const styles = {
       container: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        zIndex: '99',
-        opacity: 0.9,
         display: 'flex',
         alignItems: 'center',
-        background: 'black',
         width: '100%',
-        color: 'white',
-        fontFamily: 'Lobster',
+        color: '#3d3d3d',
       },
       body: {
         display: 'flex',
@@ -49,7 +42,7 @@ export default class Navbar extends Component {
           <MenuButton
             open={this.state.menuOpen}
             onClick={this.handleMenuClick}
-            color='white'
+            color='#3d3d3d'
           />
         </div>
         <Menu open={this.state.menuOpen}>

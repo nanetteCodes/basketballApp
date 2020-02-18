@@ -30,6 +30,7 @@ export default class MenuButton extends Component {
         alignItems: 'center',
         cursor: 'pointer',
         padding: '4px',
+        zIndex: '999',
       },
       line: {
         height: '2px',

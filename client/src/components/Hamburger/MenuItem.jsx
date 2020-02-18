@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default class MenuItem extends Component {
   constructor(props) {
@@ -26,13 +27,14 @@ export default class MenuItem extends Component {
         padding: '1rem 0',
         margin: '0 5%',
         cursor: 'pointer',
-        color: this.state.hover ? 'gray' : 'rgb(250, 250, 250)',
+        color: this.state.hover ? 'gray' : '#3d3d3d',
         transition: 'color 0.2s ease-in-out',
         animation: '0.5s slideIn forwards',
         animationDelay: this.props.delay,
       },
       menuLink: {
-        color: this.state.hover ? 'gray' : 'rgb(250, 250, 250)',
+        color: this.state.hover ? 'gray' : '#3d3d3d',
+        textDecoration: 'none',
       },
       line: {
         width: '90%',
@@ -50,6 +52,7 @@ export default class MenuItem extends Component {
           onMouseEnter={this.handleHover}
           onMouseLeave={this.handleHover}
           onClick={this.props.onClick}
+          className={this.props.className}
         >
           {this.props.regLink ? (
             <a
@@ -70,3 +73,15 @@ export default class MenuItem extends Component {
     );
   }
 }
+
+MenuItem.propTypes = {
+  delay: PropTypes.string.isRequired,
+  handleHover: PropTypes.func,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
+  onClickA: PropTypes.func,
+  hrefL: PropTypes.string,
+  className: PropTypes.string,
+  to: PropTypes.string,
+};

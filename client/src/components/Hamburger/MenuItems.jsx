@@ -11,7 +11,12 @@ const MenuItems = ({
 }) => {
   const authLinks = (
     <>
-      <MenuItem delay={`${1 * 0.1}s`} onClick={handleLinkClick} to='/'>
+      <MenuItem
+        delay={`${1 * 0.1}s`}
+        onClick={handleLinkClick}
+        to='/'
+        className='logo'
+      >
         <i className='fas fa-basketball-ball'></i> Basketball App
       </MenuItem>
       <MenuItem delay={`${2 * 0.1}s`} onClick={handleLinkClick} to='/dashboard'>
@@ -39,7 +44,12 @@ const MenuItems = ({
 
   const guestLinks = (
     <>
-      <MenuItem delay={`${1 * 0.1}s`} onClick={handleLinkClick} to='/'>
+      <MenuItem
+        delay={`${1 * 0.1}s`}
+        onClick={handleLinkClick}
+        to='/'
+        className='logo'
+      >
         <i className='fas fa-basketball-ball'></i> Basketball App
       </MenuItem>
       <MenuItem delay={`${2 * 0.1}s`} onClick={handleLinkClick} to='/profiles'>
