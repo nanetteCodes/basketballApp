@@ -25,7 +25,7 @@ export default class Menu extends Component {
         display: 'flex',
         flexDirection: 'column',
         background: '#f1f1f1',
-        opacity: 0.95,
+        opacity: 0.88,
         color: '#3d3d3d',
         transition: 'height 0.3s ease',
         zIndex: 2,
