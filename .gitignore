@@ -5,4 +5,5 @@ node_modules/
 
 ##Credentials
 config/default.json
+config/production.json
 .env
