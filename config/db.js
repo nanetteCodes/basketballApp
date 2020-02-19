@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 const config = require('config');
-const dotenv = require('dotenv')
-dotenv.config()
 
 // get from default.json
 const db = process.env.mongoURI;
