@@ -33,5 +33,9 @@
 #### Deploy backend to Heroku and code to github
 
 - `git push heroku master && git push origin master`
+- `heroku open`
 
-#### Deploy client to ?
+#### Deploy client to with netlify
+
+- Build assets for prod: `npm build`
+- `netlify open`
