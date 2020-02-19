@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const config = require('config');
 
 // get from default.json
-const db = process.env.mongoURI;
+const db = config.get('mongoURI');
 //connect to mongo gives back a promise
 const connectDB = async () => {
   try {
