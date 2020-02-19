@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://nanette:WMAIEJOuWhrAKdJJ@basketballapp-yrxru.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "a6YfKKb9S48eQ",
+  "githubClientId": "959bc8986276761f10e4",
+  "githubSecret": "bc97847e2455d82576169bae3eea065c275c435e"
+}
