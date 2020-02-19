@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const config = require('config');
-require("dotenv").config();
+const dotenv = require('dotenv')
+dotenv.config()
+
 // get from default.json
 const db = process.env.mongoURI;
 //connect to mongo gives back a promise
