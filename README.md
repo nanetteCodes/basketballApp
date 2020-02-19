@@ -1,27 +1,9 @@
-# Basketball App
+# Basketball App 🏀
 
-## Quick Start
+### _In development..._
 
-- create default.json file in config folder
+###### _Technologies Leveraged: React, Redux, Hooks, Sass, Node.js, MongoDB, Express.js_
 
-  - add uri of your mongodb connection for example
+#### Quick Start
 
-    - "mongoURI": "mongodb://localhost/dev-social",
-
-### Install server dependencies
-
-- npm install
-
-### Install client dependencies
-
-- cd client
-- npm install
-
-### Run both Express & React from root
-
-- npm run dev
-
-### Build for production
-
-- cd client
-- npm run build
+- quick start info can be found in [quickstart.md](https://github.com/nanetteCodes/basketballApp/blob/master/quickstart.md)
