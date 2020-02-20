@@ -1,0 +1,17 @@
+@import '../../utils/_variables.scss';
+
+#root {
+  background-color: $background-landing-three;
+}
+
+.signupTwo_title {
+  color: $text-color-primary;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0.33px;
+  line-height: 38px;
+}
+
+.signupTwo_btn {
+  background-color: $orange-button;
+}

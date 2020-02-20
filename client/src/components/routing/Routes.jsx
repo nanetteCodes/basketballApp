@@ -12,6 +12,7 @@ import Profiles from '../profiles/Profiles';
 import Profile from '../profile/Profile';
 import Posts from '../posts/Posts';
 import Post from '../post/Post';
+import signupTwo from '../signupFlow/signupTwo';
 import NotFound from '../layouts/NotFound';
 import PrivateRoute from './PrivateRoute';
 
@@ -21,6 +22,7 @@ const Routes = () => {
       <Alert />
       <Switch>
         <Route exact path='/register' component={Register} />
+        <Route exact path='/signup-two' component={signupTwo} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/profiles' component={Profiles} />
         <Route exact path='/profile/:id' component={Profile} />
