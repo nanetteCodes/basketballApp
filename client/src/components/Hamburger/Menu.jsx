@@ -35,7 +35,7 @@ export default class Menu extends Component {
       },
     };
     return (
-      <div style={styles.container}>
+      <div className='nav' style={styles.container}>
         {this.state.open ? (
           <div style={styles.menuList}>{this.props.children}</div>
         ) : null}
