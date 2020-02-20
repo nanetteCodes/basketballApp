@@ -4,11 +4,10 @@
   position: relative;
 
   .btn {
-    height: 48px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.18);
     background-color: $purple;
     padding: 11px;
     color: #fff;
+    border-radius: 30px;
   }
 
   a {

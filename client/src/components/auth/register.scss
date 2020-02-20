@@ -1,0 +1,47 @@
+@import '../../utils/_variables.scss';
+
+.register_title {
+  font-size: 2rem;
+  line-height: 38px;
+  margin-bottom: 149px;
+  font-weight: bold;
+  letter-spacing: 0.33px;
+}
+
+.register_btn {
+  width: 100%;
+  border-radius: 23px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: -0.41px;
+  line-height: 22px;
+
+  &.--submit {
+    background-color: #ffa179;
+  }
+  &.--facebook {
+    background-color: #3b5998;
+    margin-bottom: 12px;
+  }
+  &.--google {
+    background-color: #db4437;
+  }
+
+  &--or {
+    text-align: center;
+    display: block;
+    margin: 34px 0;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: -0.41px;
+    line-height: 22px;
+    text-decoration: underline;
+    color: #000;
+  }
+}
+
+.register_login {
+  text-align: center;
+  margin-top: 24px;
+}

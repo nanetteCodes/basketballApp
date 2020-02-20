@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
 
+import './login.scss';
+
 const Login = ({ login, isAuthenticated }) => {
   // hooks
   const [formData, setFormData] = useState({
@@ -28,15 +30,12 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <>
-      <h1 className='large text-primary'>Sign In</h1>
-      <p className='lead'>
-        <i className='fas fa-user'></i> Sign Into Your Account
-      </p>
+      <h1 className='login_title'>Log In</h1>
       <form className='form' onSubmit={e => onSubmit(e)}>
         <div className='form-group'>
           <input
             type='email'
-            placeholder='Email Address'
+            placeholder='Enter Email Address'
             name='email'
             value={email}
             onChange={e => onChange(e)}
@@ -46,7 +45,7 @@ const Login = ({ login, isAuthenticated }) => {
         <div className='form-group'>
           <input
             type='password'
-            placeholder='Password'
+            placeholder='Enter Password'
             name='password'
             value={password}
             onChange={e => onChange(e)}
@@ -54,9 +53,9 @@ const Login = ({ login, isAuthenticated }) => {
             minLength='6'
           />
         </div>
-        <input type='submit' className='btn btn-primary' value='Login' />
+        <input type='submit' className='btn login_btn --submit' value='Login' />
       </form>
-      <p className='my-1'>
+      <p className='login_signup'>
         Don't have an account? <Link to='/Register'>Sign Up</Link>
       </p>
     </>

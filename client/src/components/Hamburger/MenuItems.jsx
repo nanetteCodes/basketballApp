@@ -54,7 +54,7 @@ const MenuItems = ({
         Players
       </MenuItem>
       <MenuItem delay={`${3 * 0.1}s`} onClick={handleLinkClick} to='/register'>
-        Register
+        Sign Up
       </MenuItem>
       <MenuItem delay={`${4 * 0.1}s`} onClick={handleLinkClick} to='/login'>
         Login

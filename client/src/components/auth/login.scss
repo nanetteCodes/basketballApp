@@ -1,0 +1,28 @@
+@import '../../utils/_variables.scss';
+
+.login_title {
+  font-size: 2rem;
+  line-height: 38px;
+  margin-bottom: 149px;
+  font-weight: bold;
+  letter-spacing: 0.33px;
+}
+
+.login_btn {
+  width: 100%;
+  border-radius: 23px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: -0.41px;
+  line-height: 22px;
+
+  &.--submit {
+    background-color: #ffa179;
+  }
+}
+
+.login_signup {
+  text-align: center;
+  margin-top: 24px;
+}
