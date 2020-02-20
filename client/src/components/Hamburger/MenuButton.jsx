@@ -9,7 +9,7 @@ export default class MenuButton extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.open !== this.state.open) {
       this.setState({ open: nextProps.open });
     }
@@ -30,6 +30,7 @@ export default class MenuButton extends Component {
         alignItems: 'center',
         cursor: 'pointer',
         padding: '4px',
+        marginLeft: '8px',
         zIndex: '999',
       },
       line: {

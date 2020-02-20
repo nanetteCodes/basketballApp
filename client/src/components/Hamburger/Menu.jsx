@@ -8,7 +8,7 @@ export default class Menu extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.open !== this.state.open) {
       this.setState({ open: nextProps.open });
     }
@@ -25,7 +25,7 @@ export default class Menu extends Component {
         display: 'flex',
         flexDirection: 'column',
         background: '#f1f1f1',
-        opacity: 0.88,
+        opacity: 0.93,
         color: '#3d3d3d',
         transition: 'height 0.3s ease',
         zIndex: 2,

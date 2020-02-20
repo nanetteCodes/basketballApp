@@ -20,8 +20,7 @@ const MenuItems = ({
         <i className='fas fa-basketball-ball'></i> Basketball App
       </MenuItem>
       <MenuItem delay={`${2 * 0.1}s`} onClick={handleLinkClick} to='/dashboard'>
-        <i className='fas fa-user-friends'></i>{' '}
-        <span className='hide-sm'>Dashboard</span>
+        <i class='fas fa-home'></i> Dashboard
       </MenuItem>
       <MenuItem delay={`${3 * 0.1}s`} onClick={handleLinkClick} to='/profiles'>
         Profiles
@@ -36,8 +35,7 @@ const MenuItems = ({
         onClickA={logout}
         hrefL='#!'
       >
-        <i className='fas fa-sign-out-alt'></i>{' '}
-        <span className='hide-sm'>Logout</span>
+        Logout
       </MenuItem>
     </>
   );
