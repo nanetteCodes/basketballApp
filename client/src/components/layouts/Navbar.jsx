@@ -37,7 +37,7 @@ export default class Navbar extends Component {
     };
 
     return (
-      <div>
+      <div className='nav'>
         <div style={styles.container}>
           <MenuButton
             open={this.state.menuOpen}
